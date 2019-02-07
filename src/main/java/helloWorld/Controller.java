@@ -15,7 +15,7 @@ public class Controller {
         Scanner text = new Scanner(System.in);
         inputText(text, "Hello");
         inputText(text, "World");
-        view.viewMessageAndWords(view.CURRENT_TEXT, model.getWord());
+        view.viewMessageAndWords(View.CURRENT_TEXT, model.getWord());
     }
 
     private void inputText(Scanner in, String checkWord) {
@@ -23,14 +23,14 @@ public class Controller {
         String currentWord;
 
         while (continueProgram) {
-            view.viewMessage(String.format(view.INPUT_WORD, checkWord));
+            view.viewMessage(String.format(View.INPUT_WORD, checkWord));
             currentWord =  in.nextLine();
 
             if (currentWord.equals(checkWord)) {
                 model.wordConcatenation(currentWord);
                 continueProgram = false;
             } else {
-                view.viewMessage(view.INPUT_WRONG);
+                view.viewMessage(View.INPUT_WRONG);
             }
         }
     }
