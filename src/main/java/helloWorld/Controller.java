@@ -24,7 +24,6 @@ public class Controller {
 
         while (continueProgram) {
             view.viewMessage(String.format(view.INPUT_WORD, checkWord));
-
             currentWord =  in.nextLine();
 
             if (currentWord.equals(checkWord)) {

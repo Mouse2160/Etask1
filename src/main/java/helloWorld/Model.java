@@ -7,10 +7,6 @@ public class Model {
         return word = word + " " + addWord;
     }
 
-    public void setWord(String word) {
-        this.word = word;
-    }
-
     public String getWord() {
         return word;
     }
